@@ -1,0 +1,6 @@
+{
+	"name": "Machines",
+	"description": "$(l)High energy physics has never been this easy.",
+	"icon": "qmd:ore_leacher",
+	"sortnum": 1
+}

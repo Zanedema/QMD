@@ -1,6 +1,6 @@
 {
 	"name": "Particle Chambers",
-	"description": "stuff",
+	"description": "$(l)Putting the particles to work.",
 	"icon": "qmd:target_chamber_controller",
 	"parent": "qmd:multiblocks",
 	"sortnum": 1

@@ -1,0 +1,13 @@
+{
+	"name": "Ore Leacher",
+	"icon": "qmd:ore_leacher",
+	"category": "qmd:machines",
+	"sortnum": 0,
+	"pages": [
+		{
+			"type": "items/1",
+			"item": "qmd:ore_leacher",
+			"text": "The $(item)Ore Leacher$() is an ore processor that uses fluids to extract ore dust from ores. It can be used to extract special materials from existing ores, or to process existing ores."
+		}
+	]
+}

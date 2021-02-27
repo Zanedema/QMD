@@ -1,7 +1,7 @@
 {
 	"name": "Cell",
 	"icon": "qmd:cell",
-	"category": "qmd:items_and_devices",
+	"category": "qmd:items",
 	"sortnum": 0,
 	"pages": [
 		{

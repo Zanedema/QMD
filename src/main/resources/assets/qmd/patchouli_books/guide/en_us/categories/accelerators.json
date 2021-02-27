@@ -1,6 +1,6 @@
 {
 	"name": "Accelerators",
-	"description": "The basis of QMD",
+	"description": "$(l)Accelerating particles, for fun and profit.",
 	"icon": "qmd:linear_accelerator_controller",
 	"parent": "qmd:multiblocks",
 	"sortnum": 0

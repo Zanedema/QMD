@@ -1,0 +1,15 @@
+{
+	"name": "Discharge Lamps",
+	"icon": "qmd:discharge_lamp",
+	"category": "qmd:machines",
+	"sortnum": 0,
+	"pages": [
+		{
+			"type": "blocks/3",
+			"block1":"qmd:discharge_lamp:0,qmd:discharge_lamp:4",
+			"block2":"qmd:discharge_lamp:1,qmd:discharge_lamp:5,qmd:discharge_lamp:3",
+			"block3":"qmd:discharge_lamp:2,qmd:discharge_lamp:6",
+			"text": "The $(item)Discharge Lamps$() are decorative lighting blocks, which when infused with their gas will turn a specified color."
+		}
+	]
+}

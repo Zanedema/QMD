@@ -1,0 +1,17 @@
+{
+	"name": "Collectors",
+	"icon": "qmd:helium_collector",
+	"category": "qmd:machines",
+	"sortnum": 1,
+	"pages": [
+		{
+			
+			"type": "blocks/3",
+			"block1": "qmd:helium_collector",
+			"block2": "qmd:neon_collector",
+			"block3": "qmd:argon_collector",
+			"text": "The $(item)Collectors$() collect their specific gas at a set rate indefinitely from the atmosphere."
+		}
+
+	]
+}

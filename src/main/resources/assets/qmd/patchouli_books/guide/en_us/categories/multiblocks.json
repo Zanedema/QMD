@@ -1,6 +1,6 @@
 {
-	"name": "QMD Multiblocks",
-	"description": "what you need to know to build CERN",
+	"name": "Multiblocks",
+	"description": "$(l)Exploring high energy physics, for fun, profit, and ultimate glory.",
 	"icon": "nuclearcraft:multitool",
-	"sortnum": 2
+	"sortnum": 1
 }
