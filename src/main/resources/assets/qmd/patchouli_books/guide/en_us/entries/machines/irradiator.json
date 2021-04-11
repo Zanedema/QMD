@@ -1,0 +1,16 @@
+{
+	"name": "Irradiator",
+	"icon": "qmd:irradiator",
+	"category": "qmd:machines",
+	"sortnum": 1,
+	"pages": [
+		{
+			
+			"type": "blocks/2",
+			"block1": "qmd:irradiator",
+			"block2": "qmd:source:2,qmd:source:3",
+			"text": "The $(item)Irradiator$() uses radioactive sources to irradiate items. Currently, the two sources usable in it are Co-60 for normal speed, and Ir-192 for x10 speed."
+		}
+
+	]
+}

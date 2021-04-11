@@ -1,0 +1,13 @@
+{
+	"name": "Gluon Gun",
+	"icon": "qmd:gluon_gun",
+	"category": "qmd:items",
+	"sortnum": 0,
+	"pages": [
+		{
+			"type": "items/1",
+			"item": "qmd:gluon_gun",
+			"text": "The $(item)Gluon Gun$() is a weapon-tool hybrid that fires beams of $(thing)Glueballs$(), which instantly destroy anything in their way. It can be used as a weapon or as an instant mining tool. The ammo for the Gluon Gun is $(item)Glueball Cells$()."
+		}
+	]
+}

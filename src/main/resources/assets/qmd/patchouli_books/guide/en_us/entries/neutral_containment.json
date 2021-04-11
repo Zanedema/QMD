@@ -1,7 +1,7 @@
 {
 	"name": "Neutral Containment",
 	"icon": "qmd:neutral_containment_controller",
-	"category": "qmd:containment_chambers",
+	"category": "qmd:particle_chambers",
 	"sortnum": 1,
 	"pages": [
 		{

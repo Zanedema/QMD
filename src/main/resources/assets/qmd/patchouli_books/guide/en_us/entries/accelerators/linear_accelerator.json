@@ -1,30 +1,36 @@
 {
-	"name": "Linear Accelertor",
+	"name": "Linear Accelerator",
 	"icon": "qmd:linear_accelerator_controller",
 	"category": "qmd:accelerators",
 	"sortnum": 1,
 	"pages": [
 		{
-			
 			"type": "text",
-			"text": "Linear Accelerators are used to either create particle beams and increase their energy and focus or to increase the energy and focus of an existing particle beam."
+			"text": "$(thing)Linear Accelerators$() are used to either create particle beams and increase their energy and focus or to increase the energy and focus of an existing particle beam."
 		},
 		{
-			
 			"title": "Construction",
 			"type": "text",
-			"text": "Linear Accelerators are a cuboid of Accelerator Casings or Glass that must be 5 wide and tall. Like all $(l:accelerators/general)accelerators$(/l) they require coolant vent in input and output modes and an energy port. There must be a continuous line of Accelerator Beams down the centre. Where the beams meet the casing there must be an Accelerator Ion source (or Accelerator Beam Port in input mode for using an existing beam) at one end and an Accelerator Beam Port at the other."
+			"text": "Linear Accelerators are a rectangular prism of $(item)Accelerator Casings$() and or $(item)Accelerator Glass$() that must be five blocks wide and tall. $(l:accelerators/general)Like all accelerators$(/l), they require $(item)Accelerator Coolant Vents$() in both input and output mode, an $(item)Accelerator Energy Port$(), and a $(item)Linear Accelerator Controller$()."
 		},
 		{
-			
-			"title": "Ion source",
+			"title": "Construction Cont.",
 			"type": "text",
-			"text": "Linear Accelerators are the start of any accelerator system. They are used to create new particle beams with an ion source. The ion souce must be supplied with a source item to create the particles canister of hydrogen. The item will be used up after a certain amount of time (default 300 seconds) while the accelerator is running so it must be continually replaced for the accelerator to continue functioning."
+			"text": "There must be a continuous line of $(item)Accelerator Beam Blocks$() down the center of the accelerator. Where the beam blocks meet the casing on either side, there must be an $(item)Accelerator Ion Source$() (or an Accelerator Beam Port in input mode for using an existing beam) on one side, and an $(item)Accelerator Beam Port$() in output mode at the other."
 		},
-        {
-            "title": "Starting",
-            "type": "text",
-            "text": "To Start the Linear Accelerator just give the controller a redstone signal. Note: this will start the power usage which can be quite high and increase the heating to the max heating."
-        }
+		{
+			"title": "Energy",
+			"type": "text",
+			"text": "The energy of the particles created by the accelerator can be calculated using the equation $(thing)E=S+|q|V$(), where $(thing)S$() is the particle's starting energy, $(thing)q$() is the particle's charge, and $(thing)V$() is the accelerator voltage, which is the sum of the voltages of all of the RF cavities within the accelerator."
+		},
+		{
+			"title": "Ion source",
+			"type": "blocks/4",
+			"block1": "qmd:accelerator_source",
+			"block2": "qmd:canister:0,qmd:canister:1,qmd:canister:2,qmd:canister:3,qmd:canister:4,qmd:canister:5,qmd:canister:6",
+			"block3": "qmd:source:0",
+			"block4": "qmd:source:1,qmd:source:4",
+			"text": "The $(item)Ion Source$() is the beginning of any $(thing)Particle Beam$(). The $(item)Accelerator Ion Source$() must be supplied with a source item to create the particle beam. The source will be depleted up after a certain amount of active use, so it must be continually replaced for the accelerator to continue functioning."
+		}
 	]
 }

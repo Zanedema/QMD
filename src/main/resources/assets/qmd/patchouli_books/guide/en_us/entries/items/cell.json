@@ -6,16 +6,16 @@
 	"pages": [
 		{
 			"type": "text",
-			"text": "Cells are items that can hold exotic materials like antimatter. $(bold)Becarful with them. They have a tendency to Explode and give deadly Gamma ray bursts!$()"
+			"text": "$(Item)Cells$() are items that can hold exotic materials, like antimatter. $(bold)Be careful with them, they have a tendency to explode and release deadly gamma ray bursts.$()"
 		},
 		{
-			"type": "spotlight",
+			"type": "items/1",
 			"item": "qmd:cell",
-			"text": "Filling and emptying cells is done simply by putting the filled or empty cell in the input slot of the $(l:containment_chambers/neutral_containment)neutral containment's$() gui. $(bold)Cells must be charged to hold the material.$() They can be charged using most mods charging methods like Thermal Expansion's energetic Infuser or mekanism's energy cube. "
+			"text": "Filling and emptying cells is done by putting the filled or empty cell in the input slot of the $(l:containment_chambers/neutral_containment)neutral containment's$() controller. $(bold)Cells must be charged to hold the material.$() They can be charged using most mods charging methods like Thermal Expansion's Energetic Infuser, or Mekanism's Energy Cube."
 		},
 		{
 			"type": "text",
-			"text": "$(bold)When the cells are filled with material they will drain power constantly. If they run out of power they will catastrophically fail!$() Make sure to use them up or empty them back into the neutral containment chamber before this happens. Cell Filling and emptying recipes are also shown in JEI."
+			"text": "$(bold)When the cells are filled with material, they will drain power constantly. If they run out of power they will catastrophically fail.$() Be sure to use them or empty them back into the neutral containment chamber before this happens."
 		}
 
 	]

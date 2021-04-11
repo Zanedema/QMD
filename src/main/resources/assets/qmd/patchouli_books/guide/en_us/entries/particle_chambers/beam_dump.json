@@ -2,7 +2,7 @@
 	"name": "Beam Dump",
 	"icon": "qmd:beam_dump_controller",
 	"category": "qmd:particle_chambers",
-	"sortnum": 3,
+	"sortnum": 4,
 	"pages": [
 		{
 			"type": "text",

@@ -5,22 +5,38 @@
     "sortnum": 0,
     "pages": [
         {
-            "type": "text",
-            "text": "At the core of QMD are the Accelerator Multiblocks. There are many different types: $(l:accelerators/linear_accelerator)Linear$(/l), $(l:accelerators/ring_accelerator)Synchratron$(/l), $(l:accelerators/Beam_diverter)Beam diverter$(/l) and $(l:accelerators/decelerator)Decelerator$(/l). All these do different things, but use the same basic principles and materials."
-        },
-        {
-            "type": "text",
+            "type": "blocks/2",
+            "block1": "qmd:accelerator_casing",
+            "block2": "qmd:accelerator_glass",
             "title": "Construction",
-            "text": "All Accelerators are made out of Accelerator Casing and/or Accelerator Glass. They require an Energy Port for RF power and at least two Accelerator Coolant Vents, one set to input and the other to output. Switching the setting of the vent is done by right clicking with the NC multitool."
+            "text": "All Accelerators are made out of $(item)Accelerator Casing$() and or $(item)Accelerator Glass$(). They require $(item)Accelerator Coolant Vents$() in both input and output mode, an $(item)Accelerator Energy Port$(), and their respective controller. Switching vent polarity is done by right clicking with the NC multitool."
+        },
+        {
+            "type": "blocks/1",
+            "block": "qmd:accelerator_beam",
+            "text": " Inside each accelerator is a connected line of $(item)Accelerator Beam Blocks$() that the particles will travel through. Around this beam can be three different types of component structures: $(thing)Radio Frequency (RF) Cavities$(), $(thing)Quadrupole Magnets$(), and $(thing)Dipole Magnets$(). Around these structures, there are $(thing)Coolers$() to prevent overheating."
+        },
+        {
+            "title": "Controllers",
+            "type": "blocks/2",
+            "block1": "qmd:linear_accelerator_controller",
+            "block2": "qmd:ring_accelerator_controller",
+            "text": "Controllers are the primary interface with the accelerator. They allow you to monitor heat, power level, particle beam statistics, and also to monitor or vent coolant. The controller must have a redstone signal applied to it. The strength of this redstone signal corresponds to the output energy of the accelerator."
         },
         {
             "type": "text",
-            "text": " Inside each accelerator is a connected line of Beam Blocks that the particles will travel through. Around this beam can be 3 different types of component structures: Radio Frequency (RF) Cavities, Quadrupole Magnets and Dipole Magnets. Around these component structures there are coolers to cool the whole accelerator."
+            "text": "Thus, if a redstone signal of 15 (maximum) is applied to the controller, it will output the maximum energy. Anything less than 15 will result in the accelerator outputting the corresponding fraction of the maximum energy. For example, a redstone signal of two would result in 13.3% percent energy, or 2/15."
         },
         {
+            "type": "blocks/1",
+            "block": "qmd:accelerator_cavity:0,qmd:accelerator_cavity:1,qmd:accelerator_cavity:2,qmd:accelerator_cavity:3,qmd:accelerator_cavity:4",
+            "title": "RF Cavities",
             "anchor": "rf_cavity",
+            "text": "$(thing)RF Cavities$() increase the accelerating voltage of the accelerator, and thus the power of the resulting particle beam. The accelerating voltage of each RF Cavity is determined by the type of cavity block the are made of."
+        },
+        {
             "type": "multiblock",
-            "name": "RF Cavities",
+            "name": "RF Cavity Example",
             "multiblock": {
                 "mapping": {
                     "C": "qmd:accelerator_cavity",
@@ -45,14 +61,20 @@
                 ]
             },
             "enable_visualize": false,
-            "text": "RF Cavities are constructed from RF Cavity blocks of the same type around the Accelerator Beam as shown."
+            "text": "RF Cavities are constructed from $(item)RF Cavity Blocks$() of the same type around the $(item)Accelerator Beam Block$()."
+        },
+        {
+            "type": "blocks/1",
+            "block": "qmd:accelerator_magnet:0,qmd:accelerator_magnet:1,qmd:accelerator_magnet:2,qmd:accelerator_magnet:3,qmd:accelerator_magnet:4",
+            "title": "Quadrupole Magnets",
+            "anchor": "quadrupole",
+            "text": "$(thing)Quadrupoles$() increase the $(thing)Focus$() of the particle beam. Focus is used to determine how far a beam can travel within the accelerator. If the beam travels too far within an accelerator, it will not output. Thus, more quadrupoles need to be added to compensate for the loss in focus. The strength of a quadrupole is determined by the type of electromagnet used."
         },
         {
             "type": "text",
-            "text": " RF cavities increase the accelerating voltage of the accelerator and thus the energy of the resulting particle out the end. The accelerating voltage of each Rf Cavity is determined by the type of cavity block the are made of."
+            "text": "The resulting focus of an accelerator can be calculated using the equation $(thing)f=i-αL+|q|S$(), where $(thing)i$() is the input beam focus (normally 0.2 for a ion source), $(thing)α$() is the attenuation rate as seen in the $(item)Accelerator Beam Block$() tool tip, $(thing)L$() is the length of the accelerator, $(thing)q$() is the particle's charge, and $(thing)S is the quadrupole strength, which is the sum of the strength of all quadrupoles in the accelerator."
         },
         {
-            "anchor": "quadrupole",
             "type": "multiblock",
             "name": "Quadrupole Magnet",
             "multiblock": {
@@ -73,16 +95,20 @@
                 ]
             },
             "enable_visualize": false,
-            "text": "Quadrupole Magnets are constructed from 4 Accelerator Electromagnets of the same type around a Accelerator Beam as shown."
+            "text": "Quadrupole Magnets are constructed from four $(item)Electromagnets$() of the same type around a $(item)Beam Block$()."
         },
         {
-            "type": "text",
-            "text": " Quadrupoles increase the focus of the particle beam. The focus is used to tell how far a beam can travel. If the beam travels to far in an accelerator it will not output. So more quadrupoles need to be added to compensate the loss in focus. The strength of a quadrupole is determined by the type of electromagnet used to create it."
-        },
-        {
+            "type": "blocks/2",
+            "block1": "qmd:accelerator_magnet:0,qmd:accelerator_magnet:1,qmd:accelerator_magnet:2,qmd:accelerator_magnet:3,qmd:accelerator_magnet:4",
+            "block2": "qmd:accelerator_yoke",
+            "title": "Dipole Magnets",
             "anchor": "dipole",
+            "text": "$(thing)Dipole Magnets$() are used to bend the path of particle beams. Dipoles in $(l:accelerators/Beam_diverter)Beam Diverters$(/l) can also be oriented with the magnets horizontal to allow the beam to be outputted up or down. Dipoles can not be used in $(l:accelerators/linear_accelerator)Linear Accelerators$(/l)."
+        },
+        {
+
             "type": "multiblock",
-            "name": "Dipole Magnet",
+            "name": "Dipole Magnet Example",
             "multiblock": {
                 "mapping": {
                     "M": "qmd:accelerator_magnet",
@@ -108,48 +134,33 @@
                     ]
                 ]
             },
-            "enable_visualize": false,
-            "text": "Corner dipole example with only 2 outputs."
+            "enable_visualize": false
         },
         {
             "type": "text",
-            "text": "Dipole Magnets are created by placing an Accelerator Electromagnet of the same type above and below a beam and the filling the rest of the 3x3x3 space around that beam with Accelerator yokes. An example of corner dipole is shown on the previous page. Dipoles in $(l:accelerators/Beam_diverter)Beam diverter$(/l) can also be oriented with the magets horizontal to allow the beam to be outputet up and down. Dipoles can not be used in $(l:accelerators/linear_accelerator)Linear Accelerators$(/l)."
+            "text": "Dipole Magnets are constructed from an $(item)Accelerator Electromagnet$() of the same type above and below the $(item)Accelerator Beam Block$(), with the rest of the 3x3x3 space around that filled with $(item)Accelerator Yokes$()."
         },
         {
-            "type": "text",
-            "text": "The strength of each dipole is the strength of the electromagnet used to create it. Dipoles bend the path of beams so one must be placed in each corner."
-        },
-        {
-            "type": "image",
-            "images": [
-                "qmd:textures/gui/book_images/dipoles.png"
-            ],
-            "text": "Dipoles in an empty $(l:accelerators/ring_accelerator)Synchratron Accelerator$(/l)."
-        },
-        {
-            "type": "text",
+            "type": "blocks/4",
+            "block1": "qmd:accelerator_cooler1:0,qmd:accelerator_cooler1:1,qmd:accelerator_cooler1:2,qmd:accelerator_cooler1:3,qmd:accelerator_cooler1:4,qmd:accelerator_cooler1:5,qmd:accelerator_cooler1:6,qmd:accelerator_cooler1:7",
+            "block2": "qmd:accelerator_cooler1:8,qmd:accelerator_cooler1:9,qmd:accelerator_cooler1:10,qmd:accelerator_cooler1:11,qmd:accelerator_cooler1:12,qmd:accelerator_cooler1:13,qmd:accelerator_cooler1:14,qmd:accelerator_cooler1:15",
+            "block3": "qmd:accelerator_cooler2:0,qmd:accelerator_cooler2:1,qmd:accelerator_cooler2:2,qmd:accelerator_cooler2:3,qmd:accelerator_cooler2:4,qmd:accelerator_cooler2:5,qmd:accelerator_cooler2:6,qmd:accelerator_cooler2:7",
+            "block4": "qmd:accelerator_cooler2:8,qmd:accelerator_cooler2:9,qmd:accelerator_cooler2:10,qmd:accelerator_cooler2:11,qmd:accelerator_cooler2:12,qmd:accelerator_cooler2:13,qmd:accelerator_cooler2:14,qmd:accelerator_cooler2:15",
             "title": "Coolers",
-            "text": "Each RF cavity and electromagnet blocks produce heat while operating. To get rid of this heat coolers are placed inside the accelerator. They only work if their required rules are met. These rules are shown on the tool tips of each cooler."
-        },
-        {
-            "type": "image",
-            "images": [
-                "qmd:textures/gui/book_images/coolers.png"
-            ],
-            "text": "Example of a $(l:accelerators/linear_accelerator)Linear Accelerator$(/l) with coolers."
+            "text": "$(item)Coolers$() are used to remove heat from the accelerator. Every RF Cavity and Electromagnet Block produces heat while operating. Coolers only function if their required design rules, which are shown within their tooltip, are met."
         },
         {
             "type": "text",
             "title": "Cooling",
-            "text": "Accelerators need to be cooled as they produce heat. If they overheat while operating, some of the overheating components will explode. To cool an accelerator you need to pipe in a cold coolant and pipe out a hot coolant. Each coolant has a different temperature this determines the minimum temperature your accelerator can reach. Example Liquid helium is 4 Kelvin (K), Liquid Nitrogen is 70 K."
+            "text": "Accelerators need to be cooled as they produce heat. If they overheat while operating, some of the overheating components will explode. To cool an accelerator, you need to input a cold $(thing)Coolant$(), and extract the heated coolant from the accelerator. Each coolant has a different temperature that determines the minimum temperature your accelerator can reach."
         },
         {
             "type": "text",
-            "text": "The valid coolants and their temperatures can be seen in JEI. To pipe coolant in and out of an accelerator you need at least 2 Accelerator Coolant Vents, one in input mode and one in output mode. The mode can be switched using the nuclearcraft multitool. Hovering over the coolant bar (right) of the accelerators gui will show you the amount of coolant stored, the maximum rate coolant will be used and the maximum rate hot coolant is produced."
+            "text": "All valid coolants and their temperatures can be seen in JEI. To input and extract coolant from an accelerator, you need at least 2 Accelerator Coolant Vents, one in input mode, and one in output mode. The mode can be switched using the $(item)Multitool$(). Hovering over the coolant bar on the right hand side of the controller GUI will show the amount of coolant stored, the maximum rate coolant will be used, and the maximum rate of hot coolant that is produced."
         },
         {
             "type": "text",
-            "text": " The Accelerators coolant tanks (both input and output) can be cleared by holding shift in the gui and pressing the button that appears."
+            "text": " The accelerator's input and output coolant tanks can be cleared by holding shift in the controller and then pressing the button that appears."
         }
        
     ]

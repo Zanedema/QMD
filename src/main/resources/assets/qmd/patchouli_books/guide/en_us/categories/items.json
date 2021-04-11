@@ -2,5 +2,5 @@
 	"name": "Items",
 	"description": "$(l)The tools of the trade.",
 	"icon": "qmd:gluon_gun",
-	"sortnum": 1
+	"sortnum": 4
 }

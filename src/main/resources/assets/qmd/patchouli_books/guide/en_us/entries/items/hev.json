@@ -1,14 +1,16 @@
 {
-	"name": "Collector",
-	"icon": "qmd:collector",
-	"category": "qmd:machines",
-	"sortnum": 1,
+	"name": "HEV Suit",
+	"icon": "qmd:flesh",
+	"category": "qmd:items",
+	"sortnum": 0,
 	"pages": [
 		{
-			"type": "blocks/1",
-			"block": "qmd:collector",
+			"type": "blocks/4",
+			"block1": "qmd:flesh",
+			"block2": "qmd:flesh",
+			"block3": "qmd:flesh",
+			"block4": "qmd:flesh",
 			"text": "In my infinite wisdom, I took too long to write the documentation, and a new major feature was released while I was still developing for an old build. This is a temporary placeholder."
 		}
-
 	]
 }

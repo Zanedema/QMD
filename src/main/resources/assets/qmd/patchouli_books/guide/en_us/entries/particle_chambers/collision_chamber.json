@@ -1,8 +1,8 @@
 {
 	"name": "Collision Chamber",
 	"icon": "qmd:beam_dump_controller",
-	"category": "qmd:particle_chamber",
-	"sortnum": 4,
+	"category": "qmd:particle_chambers",
+	"sortnum": 3,
 	"pages": [
 		{
 			
